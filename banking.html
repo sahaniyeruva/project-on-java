@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Transaction System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+<h1>🏦 Bank Transaction Processing System</h1>
+
+<!-- LOGIN -->
+<div id="login" class="box">
+    <h2>Login</h2>
+    <input id="username" type="text" placeholder="Username"><br>
+    <input id="password" type="password" placeholder="Password"><br>
+    <button onclick="validateLogin()">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="box" style="display:none">
+    <h2>Dashboard</h2>
+    <button onclick="show('deposit')">Deposit</button>
+    <button onclick="show('withdraw')">Withdraw</button>
+    <button onclick="show('transfer')">Transfer</button>
+    <button onclick="show('login')">Logout</button>
+</div>
+
+<!-- DEPOSIT -->
+<div id="deposit" class="box" style="display:none">
+    <h2>Deposit</h2>
+    <input id="amount" type="number" placeholder="Enter Amount"><br>
+    <button onclick="validateDeposit()">Deposit</button>
+    <button onclick="show('dashboard')">Back</button>
+</div>
+
+<!-- WITHDRAW -->
+<div id="withdraw" class="box" style="display:none">
+    <h2>Withdraw</h2>
+    <input id="withdrawAmount" type="number" placeholder="Enter Amount"><br>
+    <button onclick="validateWithdraw()">Withdraw</button>
+    <button onclick="show('dashboard')">Back</button>
+</div>
+
+<!-- TRANSFER -->
+<div id="transfer" class="box" style="display:none">
+    <h2>Transfer</h2>
+    <input id="fromAcc" type="number" placeholder="From Account"><br>
+    <input id="toAcc" type="number" placeholder="To Account"><br>
+    <input id="transferAmount" type="number" placeholder="Amount"><br>
+    <button onclick="validateTransfer()">Transfer</button>
+    <button onclick="show('dashboard')">Back</button>
+</div>
+
+</body>
+</html>
